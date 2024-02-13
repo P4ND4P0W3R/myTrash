@@ -139,7 +139,3 @@ dist
 *.njsproj
 *.sln
 *.sw?
-
-*.local
-dist
-dist-ssr
