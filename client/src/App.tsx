@@ -4,7 +4,7 @@ import Map from './pages/Map.tsx'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
