@@ -1,9 +1,14 @@
+import { LeafletMap } from "../components/LeafletMap"
+
 
 export default function Map(){
     return(
         <>
-            <h1>Hi</h1>
-            <p>jhbh</p>
+            <div className="d-flex bg-primary">
+                <LeafletMap />
+                <p>jbhh</p>
+
+            </div>
         </>
     )
 }
