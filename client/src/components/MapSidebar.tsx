@@ -24,6 +24,14 @@ export class MapSidebar extends Component{
                 </div>
 
                 <div className="line_separation my-4" />
+
+                <div className="dataContainer">
+                    <p className='text-light pt-3 mb-2 data_text'>Nombre de poubelle recensés :</p>
+                    <h1 className='text-light'>2 900</h1>
+
+                    <p className='text-light pt-4 mb-2  data_text'>Poubelles actuellement pleines :</p>
+                    <h1 className='text-light'>293</h1>
+                </div>
             </div>
         )
     }
