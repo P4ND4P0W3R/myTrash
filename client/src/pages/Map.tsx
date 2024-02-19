@@ -1,12 +1,14 @@
 import { LeafletMap } from "../components/LeafletMap"
+import { MapSidebar } from "../components/MapSidebar"
+
 import './css/Map.css'
 
 
 export default function Map(){
     return(
         <>
-            <div className="main-container d-flex bg-primary">
-                {/*<p>jbhh</p>*/}
+            <div className="main-container d-flex">
+                <MapSidebar />
                 <LeafletMap />
 
             </div>

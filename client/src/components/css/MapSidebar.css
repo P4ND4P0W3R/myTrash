@@ -1,0 +1,31 @@
+/* FONT DIGIT - FOR THE TIME */
+@font-face{
+    font-family:'digital-clock-font';
+    src: url('put_the_location_to_your_font.ttf or .otf');
+}
+
+
+.container {
+    background-color: #353743;
+}
+
+.timeZone {
+    font-family: 'digital-clock-font', sans-serif;
+    color: white;
+}
+
+.textDark {
+    color: #72747E;
+    font-weight: 600;
+}
+
+.iconBootstrap {
+    color: skyblue;
+    width: 16px;
+}
+
+.line_separation {
+    height: 2px;
+    width: 100%;
+    background-color: #72747ec5;
+}
