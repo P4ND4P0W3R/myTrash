@@ -33,3 +33,39 @@
 .data_text {
     font-size: 15px;
 }
+
+.greenCircle {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 128, 0, 0.339);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.greenSubCircle {
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.redCircle {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(151, 2, 2, 0.741);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.redSubCircle {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(201, 0, 0);
+    border-radius: 50%;
+}

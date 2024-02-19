@@ -26,10 +26,21 @@ export class MapSidebar extends Component{
                 <div className="line_separation my-4" />
 
                 <div className="dataContainer">
-                    <p className='text-light pt-3 mb-2 data_text'>Nombre de poubelle recensés :</p>
+                
+                    <div className='d-flex pt-3 mb-2 align-items-center'>
+                        <div className="greenCircle">
+                            <div className="greenSubCircle" />
+                        </div>
+                        <p className='text-light data_text ms-3 mb-0'>Nombre de poubelle recensés :</p>
+                    </div>
                     <h1 className='text-light'>2 900</h1>
 
-                    <p className='text-light pt-4 mb-2  data_text'>Poubelles actuellement pleines :</p>
+                    <div className='d-flex pt-3 mb-2 align-items-center'>
+                        <div className="redCircle">
+                            <div className="redSubCircle" />
+                        </div>
+                        <p className='text-light data_text ms-3 mb-0'>Poubelles actuellement pleines :</p>
+                    </div>
                     <h1 className='text-light'>293</h1>
                 </div>
             </div>
