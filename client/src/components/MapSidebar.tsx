@@ -44,7 +44,7 @@ export class MapSidebar extends Component{
                         </div>
                         <p className='text-light data_text ms-3 mb-0'>Poubelles endommagés :</p>
                     </div>
-                    <h1 className='text-light'>293</h1>
+                    <h1 className='text-light'>35</h1>
                 </div>
 
                 {/*SEPARATION LINE*/}
