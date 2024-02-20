@@ -4,6 +4,13 @@ import { MarkerCircle } from './MarkerCircle';
 import "leaflet/dist/leaflet.css"
 import './css/LeafletMap.css'
 
+type TrashProps = {
+  id: number,
+  coordinateX: number;
+  coordinateY: number;
+  full: number;
+}
+
 type PropsMarker = {
   dataTrash: {
     id: number;
@@ -11,6 +18,8 @@ type PropsMarker = {
     coordinateY: number;
     full: number;
   }[];
+  toggleModal: () => void;
+  handleClickTrash: (arg0: TrashProps) => void
 };
 
 export function LeafletMap(props: PropsMarker) {
@@ -23,7 +32,7 @@ export function LeafletMap(props: PropsMarker) {
         />
 
         {props.dataTrash.map((trash) => (
-          <MarkerCircle key={trash.id} center={[trash.coordinateX, trash.coordinateY]} full={trash.full} />
+          <MarkerCircle key={trash.id} trash={trash} toggleModal={props.toggleModal} handleClickTrash={props.handleClickTrash} />
         ))}
       </MapContainer>
     );

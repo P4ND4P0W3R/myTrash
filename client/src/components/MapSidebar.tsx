@@ -29,18 +29,26 @@ export class MapSidebar extends Component{
                 {/*CONTAINER DATA TEXT*/}
                 <div className="dataContainer pb-2">
                     <div className='d-flex pt-3 mb-2 align-items-center'>
-                        <div className="greenCircle">
-                            <div className="greenSubCircle" />
+                        <div className="circle greenBackground">
+                            <div className="subCircle greenSubBackground" />
                         </div>
                         <p className='text-light data_text ms-3 mb-0'>Poubelles recensés :</p>
                     </div>
                     <h1 className='text-light'>2 900</h1>
 
                     <div className='d-flex pt-3 mb-2 align-items-center'>
-                        <div className="redCircle">
-                            <div className="redSubCircle" />
+                        <div className="circle redBackground">
+                            <div className="subCircle redSubBackground" />
                         </div>
                         <p className='text-light data_text ms-3 mb-0'>Poubelles pleines :</p>
+                    </div>
+                    <h1 className='text-light'>293</h1>
+
+                    <div className='d-flex pt-3 mb-2 align-items-center'>
+                        <div className="circle yellowBackground">
+                            <div className="subCircle yellowSubBackground" />
+                        </div>
+                        <p className='text-light data_text ms-3 mb-0'>Poubelles endommagés :</p>
                     </div>
                     <h1 className='text-light'>293</h1>
                 </div>
@@ -48,7 +56,23 @@ export class MapSidebar extends Component{
                 {/*SEPARATION LINE*/}
                 <div className="line_separation my-4" />
 
+                {/*LEGEND TEXT*/}
+                <div className="dataContainer">
+                    <div className='d-flex pt-3 mb-2 align-items-center'>
+                        <div className="legendTrash redSubBackground" />
+                        <p className='text-light data_text ms-3 mb-0 small'>Poubelles pleines</p>
+                    </div>
 
+                    <div className='d-flex pt-3 mb-2 align-items-center'>
+                        <div className="legendTrash greenSubBackground" />
+                        <p className='text-light data_text ms-3 mb-0 small'>Poubelles vides</p>
+                    </div>
+
+                    <div className='d-flex pt-3 mb-2 align-items-center'>
+                        <div className="legendTrash yellowSubBackground" />
+                        <p className='text-light data_text ms-3 mb-0 small'>Poubelles endommagés</p>
+                    </div>
+                </div>
             </div>
         )
     }

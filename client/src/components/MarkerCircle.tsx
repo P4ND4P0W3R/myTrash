@@ -2,22 +2,37 @@
 //import { useState, useEffect } from 'react'
 import { CircleMarker } from 'react-leaflet'
 
+type TrashProps = {
+    id: number,
+    coordinateX: number;
+    coordinateY: number;
+    full: number;
+  }
+  
 type MarkerProps = {
-    center: [number, number];
-    full: number
+    trash: {
+        id: number,
+        coordinateX: number;
+        coordinateY: number;
+        full: number;
+    }
+    toggleModal: () => void;
+    handleClickTrash: (arg0: TrashProps) => void
 }
   
 export const MarkerCircle = ( props: MarkerProps ) => {
 
     const handleOnclick = () => {
         console.log("on a clické !!")
+        props.toggleModal()
+        props.handleClickTrash(props.trash)
     }
 
     return (
         <CircleMarker 
-            center={props.center} 
-            color={props.full == 1 ? "red" : "green"}
-            fillColor={props.full == 1 ? "red" : "green"}
+            center={[props.trash.coordinateX, props.trash.coordinateY]} 
+            color={props.trash.full == 1 ? "red" : "green"}
+            fillColor={props.trash.full == 1 ? "red" : "green"}
             fillOpacity={0.5}
             radius={2}
             eventHandlers={{

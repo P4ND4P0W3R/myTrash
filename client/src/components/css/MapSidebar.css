@@ -34,10 +34,9 @@
     font-size: 15px;
 }
 
-.greenCircle {
+.circle {
     width: 20px;
     height: 20px;
-    background-color: rgba(0, 128, 0, 0.339);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -46,41 +45,52 @@
     animation: loading 2s infinite;
 }
 
-.greenSubCircle {
+.subCircle {
     width: 10px;
     height: 10px;
+    border-radius: 50%;
+}
+
+.greenSubBackground {
     background-color: green;
-    border-radius: 50%;
+}
+.greenBackground {
+    background-color: rgba(0, 128, 0, 0.339);
 }
 
-.redCircle {
-    width: 20px;
-    height: 20px;
-    background-color: rgba(151, 2, 2, 0.741);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    animation: loading 2s infinite;
-}
-
-.redSubCircle {
-    width: 10px;
-    height: 10px;
+.redSubBackground {
     background-color: rgb(201, 0, 0);
+}
+.redBackground {
+    background-color: rgba(151, 2, 2, 0.804);
+}
+
+.yellowSubBackground {
+    background-color: yellow;
+}
+.yellowBackground {
+    background-color: rgba(255, 255, 0, 0.562);
+}
+
+
+/*LEGEND*/
+
+.legendTrash {
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
 }
+
 
 
 @keyframes loading {
     0% {
-        opacity: 0.6;
+        opacity: 0.4;
     }
     50% {
         opacity: 1;
     }
     100% {
-        opacity: 0.6;
+        opacity: 0.4;
     }
 }
