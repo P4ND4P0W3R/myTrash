@@ -16,6 +16,7 @@ export const MarkerCircle = ( props: MarkerProps ) => {
         console.log("on a clické !!")
         setMarkerColor("blue")
     }
+
   
     return (
         <CircleMarker 
