@@ -1,0 +1,5 @@
+/* SIZE OF MAP CONTAINER */
+
+.leaflet-container{
+    height: 100vh;
+}

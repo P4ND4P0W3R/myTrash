@@ -1,0 +1,12 @@
+.sideBarContainer {
+    width: 100vw;
+    height: 100vh;
+    z-index: 5000;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.182);
+    display: flex;
+}
+
+.containerModal {
+    background-color: #353743;
+}
