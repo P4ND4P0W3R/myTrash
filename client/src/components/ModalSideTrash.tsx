@@ -46,7 +46,7 @@ export const ModalSideTrash = (props: ModalProps) => {
                         <p className='text-light data_text mb-0'>-  Dernière fois vidé :</p>
                     </div>
                     <h3 className='text-light'>20 Fev. 11:20</h3>
-                </div>
+                </div> 
 
                 {/*SEPARATION LINE*/}
                 <div className="line_separation my-4" />
