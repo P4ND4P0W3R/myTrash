@@ -23,15 +23,16 @@ export class MapSidebar extends Component{
                     <small className='textDark ms-1'>Paris</small>
                 </div>
 
+                {/*SEPARATION LINE*/}
                 <div className="line_separation my-4" />
 
-                <div className="dataContainer">
-                
+                {/*CONTAINER DATA TEXT*/}
+                <div className="dataContainer pb-2">
                     <div className='d-flex pt-3 mb-2 align-items-center'>
                         <div className="greenCircle">
                             <div className="greenSubCircle" />
                         </div>
-                        <p className='text-light data_text ms-3 mb-0'>Nombre de poubelle recensés :</p>
+                        <p className='text-light data_text ms-3 mb-0'>Poubelles recensés :</p>
                     </div>
                     <h1 className='text-light'>2 900</h1>
 
@@ -39,10 +40,15 @@ export class MapSidebar extends Component{
                         <div className="redCircle">
                             <div className="redSubCircle" />
                         </div>
-                        <p className='text-light data_text ms-3 mb-0'>Poubelles actuellement pleines :</p>
+                        <p className='text-light data_text ms-3 mb-0'>Poubelles pleines :</p>
                     </div>
                     <h1 className='text-light'>293</h1>
                 </div>
+
+                {/*SEPARATION LINE*/}
+                <div className="line_separation my-4" />
+
+
             </div>
         )
     }

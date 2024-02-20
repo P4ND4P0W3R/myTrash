@@ -9,6 +9,7 @@ type PropsMarker = {
     id: number;
     coordinateX: number;
     coordinateY: number;
+    full: number;
   }[];
 };
 
@@ -22,7 +23,7 @@ export function LeafletMap(props: PropsMarker) {
         />
 
         {props.dataTrash.map((trash) => (
-          <MarkerCircle key={trash.id} center={[trash.coordinateX, trash.coordinateY]} />
+          <MarkerCircle key={trash.id} center={[trash.coordinateX, trash.coordinateY]} full={trash.full} />
         ))}
       </MapContainer>
     );
