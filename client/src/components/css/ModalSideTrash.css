@@ -10,3 +10,11 @@
 .containerModal {
     background-color: #353743;
 }
+
+.status {
+    width: 100px;
+    font-size: 18px;
+    text-align: center;
+    padding: 6px;
+    border-radius: 510px;
+}

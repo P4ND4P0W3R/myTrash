@@ -23,6 +23,7 @@ type MarkerProps = {
 export const MarkerCircle = ( props: MarkerProps ) => {
 
     const handleOnclick = () => {
+        console.log("?.")
         props.toggleModal()
         props.handleClickTrash(props.trash)
     }

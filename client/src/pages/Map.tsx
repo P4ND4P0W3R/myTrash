@@ -8,7 +8,7 @@ import './css/Map.css'
 const data = [
     { id: 1, coordinateX: 48.851955, coordinateY: 2.356730, full: 1 },
     { id: 2, coordinateX: 48.852418, coordinateY: 2.357240, full: 0 },
-    { id: 3, coordinateX: 48.853039, coordinateY: 2.355333, full: 3 }
+    { id: 3, coordinateX: 48.853039, coordinateY: 2.355333, full: 1 }
 ]
 
 // DEFINITION OF DEFAULT TRASH
@@ -33,7 +33,7 @@ export default function Map(){
     const [selectedTrash, setSelectedTrash] = useState<TrashProps>(initialTrash);
     const [showModalTrash, setShowModalTrash] = useState(0)
 
-    const toggleModal = () => { if(showModalTrash){ setShowModalTrash(0) } else { setShowModalTrash(1) } }
+    const toggleModal = () => { if(showModalTrash){ setShowModalTrash(0) } else { setShowModalTrash(1); console.log("22") } }
     const handleClickTrash = (trash: TrashProps) => { setSelectedTrash(trash); setShowModalTrash(1) }
     const handleCloseSideBar = () => { setSelectedTrash(initialTrash); setShowModalTrash(0) }
 

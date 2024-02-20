@@ -21,6 +21,19 @@ export const ModalSideTrash = (props: ModalProps) => {
 
     if(!props.showModalTrash) return null
 
+    const renderStatusButton = () => {
+        if (props.selectedTrash.full === 0) {
+            return (
+                <p className='status greenSubBackground'>Vide</p>
+            );
+        } else {
+            return (
+                <p className='status redSubBackground'>Pleine</p>
+            )
+        }
+    };
+
+
     return(
         <div className="sideBarContainer">
             <div className="col-xl-3 px-5 pt-5 h-100 containerModal">
@@ -37,6 +50,8 @@ export const ModalSideTrash = (props: ModalProps) => {
 
                 {/*CONTAINER DATA TEXT*/}
                 <div className="dataContainer pb-2">
+                    <h1 className='text-light'>{renderStatusButton()}</h1>
+
                     <div className='d-flex pt-3 mb-2 align-items-center'>
                         <p className='text-light data_text mb-0'>-  Poubelles id :</p>
                     </div>
