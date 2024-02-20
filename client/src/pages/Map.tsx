@@ -34,7 +34,8 @@ export default function Map(){
     const [showModalTrash, setShowModalTrash] = useState(0)
 
     const toggleModal = () => { if(showModalTrash){ setShowModalTrash(0) } else { setShowModalTrash(1) } }
-    const handleClickTrash = (trash: TrashProps) => { console.log(trash) }
+    const handleClickTrash = (trash: TrashProps) => { setSelectedTrash(trash); setShowModalTrash(1) }
+    const handleCloseSideBar = () => { setSelectedTrash(initialTrash); setShowModalTrash(0) }
 
     return(
         <>
@@ -42,7 +43,8 @@ export default function Map(){
                 <MapSidebar />
                 <LeafletMap dataTrash={data} toggleModal={toggleModal} handleClickTrash={handleClickTrash} />
 
-                {showModalTrash && <ModalSideTrash showModalTrash={showModalTrash}  />}
+                {showModalTrash && <ModalSideTrash showModalTrash={showModalTrash} handleCloseSideBar={handleCloseSideBar} selectedTrash={selectedTrash} />}
+                
             </div>
         </>
     )

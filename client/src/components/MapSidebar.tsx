@@ -1,12 +1,6 @@
 import { Component } from 'react';
-
 import { GeoAltFill } from 'react-bootstrap-icons';
-
 import './css/MapSidebar.css'
-
-
-
-
 
 export class MapSidebar extends Component{
 
