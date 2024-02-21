@@ -2,7 +2,6 @@ import { MapContainer, TileLayer } from 'react-leaflet'
 import { MarkerCircle } from './MarkerCircle';
 
 import "leaflet/dist/leaflet.css"
-import './css/LeafletMap.css'
 
 type TrashProps = {
   id: number,
