@@ -25,7 +25,26 @@
     text-align: center;
     border-radius: 8px;
 }
+.buttonStatus:hover {
+    opacity: 0.8;
+}
+
 
 .disabled {
     opacity: 0.8;
+}
+
+
+
+
+
+/*                                      MODAL CONFIRMATION                                      */
+
+.modalConfirmation {
+    background-color: red;
+    width: 20vw;
+    height: 200px;
+    z-index: 2000;
+    position: absolute;
+    margin: auto;
 }

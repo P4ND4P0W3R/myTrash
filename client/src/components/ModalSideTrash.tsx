@@ -1,5 +1,7 @@
+import { useState } from 'react';
 
 import './css/ModalSideTrash.css'
+import { ModalConfirmStatus } from './ModalConfirmStatus';
 
 import { GeoAltFill } from 'react-bootstrap-icons';
 
@@ -19,6 +21,16 @@ type ModalProps = {
 }
 
 export const ModalSideTrash = (props: ModalProps) => {
+
+    const [showModalConfirmation, setShowModalConfirmation] = useState(1);
+    const [statusChoice, setStatusChoice] = useState("");
+
+    const HandleChoice = (choice: string) => {
+        setShowModalConfirmation(1);
+        setStatusChoice(choice);
+    }
+
+
 
     if(!props.showModalTrash) return null
 
@@ -101,6 +113,7 @@ export const ModalSideTrash = (props: ModalProps) => {
                 </div>
             </div>
             <div className="col-xl-9 px-5 pt-5 h-100" onClick={props.handleCloseSideBar}/>
+            <ModalConfirmStatus showModalConfirmation={showModalConfirmation} statusChoice={statusChoice}/>
         </div>
     )
 }
