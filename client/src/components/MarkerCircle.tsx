@@ -26,6 +26,7 @@ type MarkerProps = {
   
 export const MarkerCircle = ( props: MarkerProps ) => {
 
+    console.log("on re render : ", props.trash.full)
     useEffect(() => {
         if(props.indexToUpdate == props.trash.id){
             console.log("c'est moi !!")

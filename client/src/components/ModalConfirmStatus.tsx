@@ -32,6 +32,7 @@ export const ModalConfirmStatus = (props: ChoiceProps) => {
             status = 0
         }
         props.updateFullById(props.selectedTrash.id, status)
+        props.setShowModalConfirmation(0);
     }
 
     if(!props.showModalConfirmation) return null
