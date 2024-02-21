@@ -38,8 +38,8 @@ export const ModalConfirmStatus = (props: ChoiceProps) => {
                 <p className="mt-4 px-3">Vous êtes sur le point de déclarer cette poubelle comme : {status()}</p>
                 
                 <div className="d-flex mt-4 pt-2 justify-content-center">
-                    <div className="buttonCancel button col-3 bg-primary me-4 text-center p-2" onClick={() => HandleCancel()}>Annuler</div>
-                    <div className="buttonConfirm button col-3 bg-primary ms-4 text-center p-2">Confirmer</div>
+                    <div className="buttonCancel button col-3 me-4 text-center p-2" onClick={() => HandleCancel()}>Annuler</div>
+                    <div className="buttonConfirm button col-3 ms-4 text-center p-2">Confirmer</div>
                 </div>
             </div>
         </div>

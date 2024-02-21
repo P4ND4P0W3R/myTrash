@@ -59,5 +59,18 @@
     ;
 }
 
-.button {
+.buttonCancel {
+    border: 3px rgb(255, 255, 255) solid;
+    border-radius: 10px;
+}
+
+.buttonConfirm {
+    background-color: white;
+    color: #353743;
+    border-radius: 10px;
+}
+
+.buttonCancel:hover, .buttonConfirm:hover {
+    opacity: 0.6;
+    cursor: pointer;
 }
