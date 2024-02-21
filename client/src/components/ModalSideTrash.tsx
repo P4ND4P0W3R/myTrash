@@ -18,6 +18,7 @@ type ModalProps = {
     showModalTrash: number
     handleCloseSideBar: () => void
     selectedTrash: TrashProps;
+    updateFullById: (arg0: number, arg1: number) => void;
 }
 
 export const ModalSideTrash = (props: ModalProps) => {

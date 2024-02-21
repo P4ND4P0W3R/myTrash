@@ -23,6 +23,17 @@ type TrashProps = {
 
 export default function Map(){
 
+
+    function updateFullById(id: number, newFullValue: number) {
+        // Find the index of the element with the given id
+        const index = data.findIndex(trash => trash.id === id);
+        // If the element with the given id exists
+        if (index !== -1) {
+            // Update the 'full' property of the element
+            data[index].full = newFullValue;
+        }
+      }
+
     // DEFINITION OF INITAL TRASH => WHEN NO TRASH IS SELECTED
     const initialTrash: TrashProps = {
         id: 0,
@@ -45,7 +56,7 @@ export default function Map(){
                 <MapSidebar />
                 <LeafletMap dataTrash={data} toggleModal={toggleModal} handleClickTrash={handleClickTrash} />
 
-                {showModalTrash && <ModalSideTrash showModalTrash={showModalTrash} handleCloseSideBar={handleCloseSideBar} selectedTrash={selectedTrash} />}
+                {showModalTrash && <ModalSideTrash showModalTrash={showModalTrash} handleCloseSideBar={handleCloseSideBar} selectedTrash={selectedTrash} updateFullById={updateFullById} />}
                 
             </div>
         </>

@@ -25,6 +25,7 @@ type PropsMarker = {
 
 export function LeafletMap(props: PropsMarker) {
 
+
     return (
       <MapContainer center={[48.8604, 2.3440]} zoom={13} minZoom={13} scrollWheelZoom={true} className='col-xl-9'>
         <TileLayer
