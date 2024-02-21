@@ -26,11 +26,15 @@ export default function Map(){
 
     function updateFullById(id: number, newFullValue: number) {
         // Find the index of the element with the given id
+        console.log("first")
         const index = data.findIndex(trash => trash.id === id);
         // If the element with the given id exists
         if (index !== -1) {
             // Update the 'full' property of the element
+            console.log("before : ", data[index].full)
             data[index].full = newFullValue;
+            console.log("after : ", data[index].full)
+            
         }
       }
 

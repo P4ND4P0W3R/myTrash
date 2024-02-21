@@ -114,7 +114,7 @@ export const ModalSideTrash = (props: ModalProps) => {
                 </div>
             </div>
             <div className="col-xl-9 px-5 pt-5 h-100" onClick={props.handleCloseSideBar}/>
-            <ModalConfirmStatus showModalConfirmation={showModalConfirmation} statusChoice={statusChoice} setShowModalConfirmation={setShowModalConfirmation}/>
+            <ModalConfirmStatus showModalConfirmation={showModalConfirmation} statusChoice={statusChoice} setShowModalConfirmation={setShowModalConfirmation} updateFullById={props.updateFullById} selectedTrash={props.selectedTrash} />
         </div>
     )
 }
