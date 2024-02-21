@@ -6,9 +6,9 @@ import { ModalSideTrash } from "../components/ModalSideTrash"
 import './css/Map.css'
 
 const data = [
-    { id: 1, coordinateX: 48.851955, coordinateY: 2.356730, full: 1 },
-    { id: 2, coordinateX: 48.852418, coordinateY: 2.357240, full: 0 },
-    { id: 3, coordinateX: 48.853039, coordinateY: 2.355333, full: 1 }
+    { id: 1, coordinateX: 48.851955, coordinateY: 2.356730, full: 1, etat: 0 },
+    { id: 2, coordinateX: 48.852418, coordinateY: 2.357240, full: 0, etat: 0 },
+    { id: 3, coordinateX: 48.853039, coordinateY: 2.355333, full: 1, etat: 1 }
 ]
 
 // DEFINITION OF DEFAULT TRASH
@@ -17,6 +17,7 @@ type TrashProps = {
     coordinateX: number;
     coordinateY: number;
     full: number;
+    etat: number
 }
 
 
@@ -28,6 +29,7 @@ export default function Map(){
         coordinateX: 0,
         coordinateY: 0,
         full: 0,
+        etat: 0,
     };
 
     const [selectedTrash, setSelectedTrash] = useState<TrashProps>(initialTrash);

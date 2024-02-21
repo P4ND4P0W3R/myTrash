@@ -9,6 +9,7 @@ type TrashProps = {
   coordinateX: number;
   coordinateY: number;
   full: number;
+  etat: number
 }
 
 type PropsMarker = {
@@ -17,6 +18,7 @@ type PropsMarker = {
     coordinateX: number;
     coordinateY: number;
     full: number;
+    etat: number
   }[];
   toggleModal: () => void;
   handleClickTrash: (arg0: TrashProps) => void

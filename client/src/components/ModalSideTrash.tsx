@@ -1,4 +1,4 @@
-import { Button } from 'react-bootstrap';
+
 import './css/ModalSideTrash.css'
 
 import { GeoAltFill } from 'react-bootstrap-icons';
@@ -9,6 +9,7 @@ type TrashProps = {
     coordinateX: number;
     coordinateY: number;
     full: number;
+    etat: number
 }
 
 type ModalProps = {
@@ -22,7 +23,11 @@ export const ModalSideTrash = (props: ModalProps) => {
     if(!props.showModalTrash) return null
 
     const renderStatusButton = () => {
-        if (props.selectedTrash.full === 0) {
+        if (props.selectedTrash.etat === 1){
+            return (
+                <p className='status bg-warning'>Endommagé</p>
+            );
+        }else if (props.selectedTrash.full === 0) {
             return (
                 <p className='status greenSubBackground'>Vide</p>
             );
@@ -32,6 +37,29 @@ export const ModalSideTrash = (props: ModalProps) => {
             )
         }
     };
+
+
+    const buttonStatus = () => {
+        if (props.selectedTrash.etat === 1){
+            return (
+                <div className='w-100 mt-3 bg-warning buttonStatus text-dark disabled'></div>
+            );
+        }else if (props.selectedTrash.full === 0) {
+            return (
+                <div>
+                    <div className='w-100 bg-success buttonStatus text-light'>Vide</div>
+                    <div className='w-100 mt-3 bg-warning buttonStatus'>Endommagée</div>
+                </div>
+            );
+        } else {
+            return(
+                <div>
+                    <div className='w-100 redSubBackground disabled buttonStatus text-light disabled'>Pleine</div>
+                    <div className='w-100 mt-3 bg-warning buttonStatus disabled'>Endommagée</div>
+                </div>
+            )
+        }
+    }
 
 
     return(
@@ -67,9 +95,9 @@ export const ModalSideTrash = (props: ModalProps) => {
                 <div className="line_separation my-4" />
 
                 <div className="dataContainer pb-2">
-                    <p className='text-light'>Signalement :</p>
-                    <Button className='btn w-100 bg-success'>Pleine</Button>
-                    <Button className='btn w-100 mt-4'>Endommagée</Button>
+                    <p className='text-light'>Signalements :</p>
+                    {buttonStatus()}
+                   
                 </div>
             </div>
             <div className="col-xl-9 px-5 pt-5 h-100" onClick={props.handleCloseSideBar}/>

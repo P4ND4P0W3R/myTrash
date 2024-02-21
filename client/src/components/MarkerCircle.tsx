@@ -7,6 +7,7 @@ type TrashProps = {
     coordinateX: number;
     coordinateY: number;
     full: number;
+    etat: number
   }
   
 type MarkerProps = {
@@ -15,6 +16,7 @@ type MarkerProps = {
         coordinateX: number;
         coordinateY: number;
         full: number;
+        etat: number
     }
     toggleModal: () => void;
     handleClickTrash: (arg0: TrashProps) => void
@@ -31,8 +33,8 @@ export const MarkerCircle = ( props: MarkerProps ) => {
     return (
         <CircleMarker 
             center={[props.trash.coordinateX, props.trash.coordinateY]} 
-            color={props.trash.full == 1 ? "red" : "green"}
-            fillColor={props.trash.full == 1 ? "red" : "green"}
+            color={props.trash.etat == 1 ? "#FFC106" : props.trash.full == 1 ? "red" : "green"}
+            fillColor={props.trash.etat == 1 ? "#FFC106" : props.trash.full == 1 ? "red" : "green"}
             fillOpacity={0.5}
             radius={2}
             eventHandlers={{

@@ -5,6 +5,7 @@
     position: absolute;
     background-color: rgba(0, 0, 0, 0.182);
     display: flex;
+    overflow: hidden;
 }
 
 .containerModal {
@@ -12,9 +13,19 @@
 }
 
 .status {
-    width: 100px;
+    width: auto;
     font-size: 18px;
     text-align: center;
     padding: 6px;
     border-radius: 510px;
+}
+
+.buttonStatus {
+    padding: 8px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.disabled {
+    opacity: 0.8;
 }
