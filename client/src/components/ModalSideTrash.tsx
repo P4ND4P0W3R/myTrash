@@ -25,7 +25,7 @@ export const ModalSideTrash = (props: ModalProps) => {
     const [showModalConfirmation, setShowModalConfirmation] = useState(1);
     const [statusChoice, setStatusChoice] = useState("");
 
-    const HandleChoice = (choice: string) => {
+    function HandleChoice(choice: string) {
         setShowModalConfirmation(1);
         setStatusChoice(choice);
     }
@@ -59,8 +59,8 @@ export const ModalSideTrash = (props: ModalProps) => {
         }else if (props.selectedTrash.full === 0) {
             return (
                 <div>
-                    <div className='w-100 bg-success buttonStatus text-light'>Vide</div>
-                    <div className='w-100 mt-3 bg-warning buttonStatus'>Endommagée</div>
+                    <div className='w-100 bg-success buttonStatus text-light' onClick={() => HandleChoice("Pleine")}>Vide</div>
+                    <div className='w-100 mt-3 bg-warning buttonStatus' onClick={() => HandleChoice("Endommagé")}>Endommagée</div>
                 </div>
             );
         } else {
