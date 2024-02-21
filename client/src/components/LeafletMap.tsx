@@ -20,7 +20,9 @@ type PropsMarker = {
     etat: number
   }[];
   toggleModal: () => void;
-  handleClickTrash: (arg0: TrashProps) => void
+  handleClickTrash: (arg0: TrashProps) => void;
+  indexToUpdate: number;
+  setIndexToUpdate: (arg0: number) => void
 };
 
 export function LeafletMap(props: PropsMarker) {
@@ -34,7 +36,7 @@ export function LeafletMap(props: PropsMarker) {
         />
 
         {props.dataTrash.map((trash) => (
-          <MarkerCircle key={trash.id} trash={trash} toggleModal={props.toggleModal} handleClickTrash={props.handleClickTrash} />
+          <MarkerCircle key={trash.id} trash={trash} toggleModal={props.toggleModal} handleClickTrash={props.handleClickTrash} indexToUpdate={props.indexToUpdate} setIndexToUpdate={props.setIndexToUpdate} />
         ))}
       </MapContainer>
     );

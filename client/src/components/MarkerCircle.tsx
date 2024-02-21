@@ -1,5 +1,5 @@
 
-//import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { CircleMarker } from 'react-leaflet'
 
 type TrashProps = {
@@ -19,10 +19,19 @@ type MarkerProps = {
         etat: number
     }
     toggleModal: () => void;
-    handleClickTrash: (arg0: TrashProps) => void
+    handleClickTrash: (arg0: TrashProps) => void;
+    indexToUpdate: number;
+    setIndexToUpdate: (arg0: number) => void
 }
   
 export const MarkerCircle = ( props: MarkerProps ) => {
+
+    useEffect(() => {
+        if(props.indexToUpdate == props.trash.id){
+            console.log("c'est moi !!")
+        }
+        //NE PAS FAIRE ATTENTION À CETTE ERREUR SVP
+    }, [props.indexToUpdate])
 
     const handleOnclick = () => {
         console.log("?.")

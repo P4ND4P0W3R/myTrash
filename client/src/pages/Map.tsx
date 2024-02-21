@@ -23,6 +23,8 @@ type TrashProps = {
 
 export default function Map(){
 
+    const [indexToUpdate, setIndexToUpdate] = useState(-1)
+
 
     function updateFullById(id: number, newFullValue: number) {
         // Find the index of the element with the given id
@@ -33,8 +35,8 @@ export default function Map(){
             // Update the 'full' property of the element
             console.log("before : ", data[index].full)
             data[index].full = newFullValue;
+            setIndexToUpdate(index)
             console.log("after : ", data[index].full)
-            
         }
       }
 
@@ -58,9 +60,9 @@ export default function Map(){
         <>
             <div className="main-container d-flex">
                 <MapSidebar />
-                <LeafletMap dataTrash={data} toggleModal={toggleModal} handleClickTrash={handleClickTrash} />
+                <LeafletMap dataTrash={data} toggleModal={toggleModal} handleClickTrash={handleClickTrash} indexToUpdate={indexToUpdate} setIndexToUpdate={setIndexToUpdate}/>
 
-                {showModalTrash && <ModalSideTrash showModalTrash={showModalTrash} handleCloseSideBar={handleCloseSideBar} selectedTrash={selectedTrash} updateFullById={updateFullById} />}
+                {showModalTrash && <ModalSideTrash showModalTrash={showModalTrash} handleCloseSideBar={handleCloseSideBar} selectedTrash={selectedTrash} updateFullById={updateFullById}/>}
                 
             </div>
         </>
