@@ -22,7 +22,7 @@ type ModalProps = {
 
 export const ModalSideTrash = (props: ModalProps) => {
 
-    const [showModalConfirmation, setShowModalConfirmation] = useState(1);
+    const [showModalConfirmation, setShowModalConfirmation] = useState(0);
     const [statusChoice, setStatusChoice] = useState("");
 
     function HandleChoice(choice: string) {
