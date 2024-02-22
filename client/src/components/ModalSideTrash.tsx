@@ -60,14 +60,14 @@ export const ModalSideTrash = (props: ModalProps) => {
         }else if (props.selectedTrash.full === 0) {
             return (
                 <div>
-                    <div className='w-100 bg-success buttonStatus text-light' onClick={() => HandleChoice("Pleine")}>Vide</div>
+                    <div className='w-100 redSubBackground buttonStatus text-light' onClick={() => HandleChoice("Pleine")}>Pleine</div>
                     <div className='w-100 mt-3 bg-warning buttonStatus' onClick={() => HandleChoice("Endommagé")}>Endommagée</div>
                 </div>
             );
         } else {
             return(
                 <div>
-                    <div className='w-100 redSubBackground disabled buttonStatus text-light disabled'>Pleine</div>
+                    <div className='w-100 redSubBackground disabled buttonStatus text-light'>Pleine</div>
                     <div className='w-100 mt-3 bg-warning buttonStatus disabled'>Endommagée</div>
                 </div>
             )
