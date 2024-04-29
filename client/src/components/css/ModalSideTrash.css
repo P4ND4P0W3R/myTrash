@@ -5,8 +5,72 @@
     position: absolute;
     background-color: rgba(0, 0, 0, 0.182);
     display: flex;
+    overflow: hidden;
 }
 
 .containerModal {
     background-color: #353743;
+}
+
+.status {
+    width: auto;
+    font-size: 18px;
+    text-align: center;
+    padding: 6px;
+    border-radius: 510px;
+}
+
+.buttonStatus {
+    padding: 8px;
+    text-align: center;
+    border-radius: 8px;
+}
+.buttonStatus:hover {
+    opacity: 0.8;
+}
+
+
+.disabled {
+    opacity: 0.8;
+}
+
+
+
+
+
+/*                                      MODAL CONFIRMATION                                      */
+
+.modalConfirmation {
+    background-color: rgba(255, 0, 0, 0.304)(46, 46, 46);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    position: absolute;
+}
+
+.modalContainer {
+    width: 100px;
+    height: 250px;
+    background-color: #5a5c67;
+    padding: 10px
+    ;
+}
+
+.buttonCancel {
+    border: 3px rgb(255, 255, 255) solid;
+    border-radius: 10px;
+}
+
+.buttonConfirm {
+    background-color: white;
+    color: #353743;
+    border-radius: 10px;
+}
+
+.buttonCancel:hover, .buttonConfirm:hover {
+    opacity: 0.6;
+    cursor: pointer;
 }
