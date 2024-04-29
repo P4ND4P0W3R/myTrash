@@ -5,8 +5,11 @@
 }*/
 
 
-.container {
+
+
+.container{
     background-color: #353743;
+    overflow: hidden;
 }
 
 .timeZone {
@@ -66,10 +69,10 @@
 }
 
 .yellowSubBackground {
-    background-color: yellow;
+    background-color: #FFC106;
 }
 .yellowBackground {
-    background-color: rgba(255, 255, 0, 0.562);
+    background-color: #c0900088;
 }
 
 
