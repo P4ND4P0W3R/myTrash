@@ -1,9 +1,14 @@
 
+import './css/Home.css'; // Importez le fichier CSS
+import NavBar from '../components/NavBar';
 
-export default function Home(){
-    return(
+const Home = () => {
+    return (
         <>
-            <h1>Main page</h1>
+        <NavBar />
+            <h1 className="mytrash-logo">My Trash</h1>
         </>
-    )
-}
+    );
+};
+
+export default Home;
