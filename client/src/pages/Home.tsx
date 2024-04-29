@@ -1,10 +1,8 @@
 
 import './css/Home.css'; // Importez le fichier CSS
-
-import NavBar from '../components/navbar';
+import NavBar from '../components/NavBar';
 
 const Home = () => {
-
     return (
         <>
         <NavBar />

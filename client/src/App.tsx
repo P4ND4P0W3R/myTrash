@@ -1,6 +1,7 @@
 // IMPORT ALL PAGES
 import Home from './pages/Home.tsx'
 import Map from './pages/Map.tsx'
+import Find from './pages/Find.tsx'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route index element={<Home />} />
           <Route path='/map' element={<Map />} />
+          <Route path='/Find' element={<Find />} />
         </Routes>
       </BrowserRouter>
     </div>
