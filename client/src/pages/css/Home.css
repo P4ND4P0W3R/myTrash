@@ -1,0 +1,234 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+.navbar {
+  background-color: hsl(184, 49%, 65%);
+  position: relative;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navbar a {
+  color: black;
+}
+
+.navbar .makeit-logo {
+  font-size: 2em;
+  font-weight: bold;
+  position: relative;
+  
+}
+
+.navbar .makeit-logo::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #f3f65cb7;
+  transition: width 0.4s ease;
+}
+
+.navbar .makeit-logo:hover::after {
+  width: 100%;
+}
+
+.navbar .makeit-logo:hover {
+  color: white;
+  transition: color 0.2s ease;
+}
+
+.navbar .nav-links ul {
+  display: flex;
+}
+
+.navbar .nav-links ul li {
+  margin: 0 25px;
+}
+
+.navbar .nav-links ul li .nav-link{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  border: none;
+  background: none;
+  font-weight: 600;
+  font-family: 'Arial', sans-serif;
+}
+.navbar .nav-links ul li .nav-link::before{
+  margin-left: auto;
+}
+.navbar .nav-links ul li .nav-link::after, .navbar .nav-links ul li .nav-link::before{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #f3f65cb7;
+  display: block;
+  transition: 0.5s;
+}
+.navbar .nav-links ul li .nav-link:hover::after, .navbar .nav-links ul li .nav-link:hover::before{
+ width: 100%; 
+
+}
+.navbar .burger-menu {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 35px;
+  width: 35px;
+}
+.navbar .new-buger {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 35px;
+  width: 35px;
+}
+@media screen and (max-width: 900px) {
+  .navbar {
+    padding: 20px;
+  }
+
+  .navbar .makeit-logo {
+    position: relative;
+    top: 1px;
+    left: 15px;
+  }
+
+  .navbar .burger-menu {
+    display: block;
+    top: 20px;
+    right: 30px;
+  }
+
+  .nav-links {
+    top: 0;
+    right: 0;
+    position: absolute;
+    background-color: hsl(183, 49%, 65%, 0.511);
+    backdrop-filter: blur(6px);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100%;
+    transition: all 0.5s ease-in-out;
+
+  }
+  .nav-links.mobile-menu {
+    margin-right: 0;
+  }
+
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar .nav-links ul li {
+    margin: 25px 0;
+    font-size: 1.2em;
+  }
+}
+
+/*fin navbar*/
+
+/*footer*/
+.footer {
+  background-color: hsl(184, 49%, 65%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+.footer-link-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.footer-nav-link {
+  padding: 15px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: #f4e7dc;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 12px;
+  transition: all 0.2s ease;
+  color: black;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.footer-nav-link:hover {
+  background-color: hsl(183, 75%, 31%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(240, 232, 184) 0px 7px 29px 0px;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+}
+
+.social-links li {
+  margin-right: 20px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  position: relative;
+}
+
+.social-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.4s ease;
+}
+
+.social-links a:hover::after {
+  width: 100%;
+}
+
+.copy {
+  margin-top: 30px;
+  color: white;
+  font-family: Courier Bold;
+}
+@media screen and (max-width: 600px) {
+  .footer-link-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-nav-link {
+    margin: 10px 0;
+  }
+}
