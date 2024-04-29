@@ -67,7 +67,7 @@ export const LoginForm = (props: LoginProps) => {
             <h1 className="titleName pt-md-5 w-md-50 w-100">Je me connecte</h1>
             <div className='position-relative col-12'>
                 <div className="inputContainer p-2 px-3 pe-4 d-flex justify-content-between align-items-center mt-md-5 mt-4">
-                    <input type="mail" className="inputField col-11" placeholder='Alexandre.kostic@gmail.com' onChange={(e) => props.setEmail(e.target.value)}/>
+                    <input type="mail" className="inputField col-11" placeholder='Email' onChange={(e) => props.setEmail(e.target.value)}/>
                     <EnvelopeFill />
                 </div>
 
