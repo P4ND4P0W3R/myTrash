@@ -4,7 +4,7 @@
     max-height: 100vh;
     overflow: hidden;
     position: relative;
-    background: linear-gradient(0.25turn, #deeaff 25%, #F1ECEF 75%);
+    background: linear-gradient(0.25turn, #e4eee7 25%, #edf1ec 75%);
 }
 
 .backgroundWave {
@@ -18,12 +18,13 @@
 
 .backgroundPerson {
     position: absolute;
-    right: 100px;
-    bottom: 0px;
+    right: 0px;
+    top: 200px;
     z-index: 0;
     overflow: hidden;
-    max-width: 500px;
+    max-width: 800px;
     object-fit: cover;
+    margin: auto;
 }
 
 
@@ -68,14 +69,14 @@
 
     padding: 2px;
 
-    border: 2px #4970E2 solid;
+    border: 2px #49e295 solid;
     border-radius: 3px;
     position: relative;
 
 }
 .checkBox:checked {
     background-color: white;
-    border: 2px #4970E2 solid;
+    border: 2px #49e295 solid;
 
 }
 
@@ -86,7 +87,7 @@
 
     width: 6px;
     height: 6px;
-    background-color: #4970E2;
+    background-color: #49e295;
     border-radius: 1px;
     transform: translate(-9%, -9%);
 }
@@ -94,7 +95,7 @@
 .connectionText {
     font-weight: 600;
     color: white;
-    background-color: #4970E2;
+    background-color: #49e295;
     cursor: pointer;
 }
 
@@ -103,7 +104,7 @@
 }
 
 .passwordText {
-    color: #4970E2;
+    color: #49e295;
     cursor: pointer;
 }
 

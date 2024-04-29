@@ -85,7 +85,7 @@ export const LoginForm = (props: LoginProps) => {
 
             <div className="buttonContainer d-flex align-items-center justify-content-between mt-md-4 mt-3">
                 {validButton()}
-                <div className="p-2 text-primary col-md-6 col-6 ms-2 text-center passwordText px-0 ">MOT DE PASSE OUBLIÉ</div>
+                <div className="p-2 text-dark col-md-6 col-6 ms-2 text-center passwordText px-0 ">MOT DE PASSE OUBLIÉ</div>
             </div>
 
             {/*ACCES DIRECT*/}
