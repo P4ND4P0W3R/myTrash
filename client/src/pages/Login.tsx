@@ -1,5 +1,6 @@
 // IMPORT CSS
 import './css/Login.css'
+import NavBar from '../components/NavBar';
 
 // IMPORT IMAGE
 import backgroundLogin from '../assets/svg/backgroundConnection4.svg'
@@ -50,6 +51,7 @@ export default function Login(){
 
     return(
         <>
+            <NavBar />
             <div className="mainContainer p-md-5 p-4">
                 <LoginForm email={email} setEmail={setEmail} password={password} setPassword={setPassword} error={error} handleClick={handleClick} isLoading={isLoading}/>
                 <img src={backgroundLogin} width={1000} className='backgroundWave col-xl-7 col-md-8 col-12'/>
