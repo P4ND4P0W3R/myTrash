@@ -4,6 +4,7 @@ import Map from './pages/Map.tsx'
 import Find from './pages/Find.tsx'
 import ContactUs from './pages/Contact.tsx';
 import Login from './pages/Login.tsx';
+import Register from './pages/Register.tsx';
 
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -21,6 +22,7 @@ function App() {
           <Route path='/Find' element={<Find />} />
           <Route path='/contact' element={<ContactUs />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
         </Routes>
       </BrowserRouter>
     </div>
