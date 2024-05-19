@@ -2,6 +2,7 @@ import { useState } from "react"
 import { LeafletMap } from "../components/LeafletMap"
 import { MapSidebar } from "../components/MapSidebar"
 import { ModalSideTrash } from "../components/ModalSideTrash"
+import NavBar from "../components/NavBar"
 
 import './css/Map.css'
 
@@ -58,6 +59,7 @@ export default function Map(){
 
     return(
         <>
+            <NavBar />
             <div className="main-container d-flex">
                 <MapSidebar />
                 <LeafletMap dataTrash={data} toggleModal={toggleModal} handleClickTrash={handleClickTrash} indexToUpdate={indexToUpdate} setIndexToUpdate={setIndexToUpdate}/>

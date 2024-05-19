@@ -146,3 +146,86 @@
 }
 
 /*fin navbar*/
+
+/* Home.css */
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the top of the page */
+  height: 100%; /* Adjust for the height of the navbar */
+  padding-top: 64px; /* Add padding to push content below the navbar */
+  background-image: url('../../assets/bg.jpg'); /* Add the background image */
+  background-repeat: repeat-y; /* Repeat background image vertically while scrolling */
+  background-position: center
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  width: 50px; /* Adjust the width of the image */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add some space between the image and the logo */
+}
+
+.mytrash-logo {
+  font-family: "Lucida Handwriting"; /* Change font to "script" */
+  font-size: 3rem;
+  margin-bottom: 0.5rem; /* Reduce margin */
+}
+
+.catch-phrase {
+  font-family: "Garamond", serif; /* Change font to "Garamond" */
+  font-size: 5rem; /* Increase font size for better visibility */
+  margin-bottom: 2rem; /* Increase margin for spacing */
+}
+
+.get-started-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #49e295; /* Change button color */
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: 2rem; /* Add some space above the button */
+}
+
+.get-started-btn:hover {
+  background-color: #37b583; /* Darker shade of the primary color */
+}
+
+.image-container {
+  display: flex;
+  justify-content: center; /* Align images to the center horizontally */
+  margin-top: 1rem; /* Add space above the images */
+}
+
+.image {
+  width: 300px; /* Adjust the width of the images */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 10px; /* Add space between the images */
+}
+
+.description-box {
+  background-color: #c9f2d7; /* Light green background color */
+  padding: 20px; /* Add padding to the box */
+  border-radius: 10px; /* Add rounded corners to the box */
+  margin-bottom: 2rem; /* Add some bottom margin for spacing */
+  max-width: 600px; /* Set maximum width */
+  width: 80%; /* Set width to a percentage of the container */
+  margin-left: auto; /* Center the box horizontally */
+  margin-right: auto; /* Center the box horizontally */
+}
+
+.description {
+  font-family: "Garamond", serif; /* Change font family if needed */
+  font-weight: bold;
+  font-size: 1.2rem; /* Adjust font size */
+  text-align: center; /* Center the text */
+}
