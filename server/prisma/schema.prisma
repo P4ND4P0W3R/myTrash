@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model bins {
+  binid               Int       @id @default(autoincrement())
+  locationdescription String?   @db.VarChar(255)
+  latitude            Float?
+  longitude           Float?
+  city                String    @db.VarChar(255)
+  isfull              Boolean   @default(false)
+  isgoodcondition     Boolean   @default(true)
+  emptiedat           DateTime? @db.Timestamp(6)
+  lastreported        DateTime? @db.Timestamp(6)
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model users {
+  userid    Int       @id @default(autoincrement())
+  username  String    @db.VarChar(255)
+  email     String    @db.VarChar(255)
+  password  String    @db.VarChar(255)
+  role      String    @db.VarChar(255)
+  createdat DateTime? @default(now()) @db.Timestamp(6)
+}
