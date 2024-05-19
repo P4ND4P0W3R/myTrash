@@ -1,0 +1,231 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+.navbar {
+  background-color: #49e295;
+  position: relative;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navbar a {
+  color: black;
+}
+
+.navbar .mytrash-logo {
+  font-size: 2em;
+  font-weight: bold;
+  position: relative;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.navbar .mytrash-logo::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #377520b7;
+  transition: width 0.4s ease;
+}
+
+.navbar .mytrash-logo:hover::after {
+  width: 100%;
+}
+
+.navbar .mytrash-logo:hover {
+  color: white;
+  transition: color 0.2s ease;
+}
+
+.navbar .nav-links ul {
+  display: flex;
+  margin-right: 20px;
+  margin-top: 15px;
+}
+
+.navbar .nav-links ul li {
+  margin: 0 25px;
+}
+
+.navbar .nav-links ul li .nav-link{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  border: none;
+  background: none;
+  font-weight: 600;
+  font-family: 'Arial', sans-serif;
+}
+.navbar .nav-links ul li .nav-link::before{
+  margin-left: auto;
+}
+.navbar .nav-links ul li .nav-link::after, .navbar .nav-links ul li .nav-link::before{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #377520b7;
+  display: block;
+  transition: 0.5s;
+}
+.navbar .nav-links ul li .nav-link:hover::after, .navbar .nav-links ul li .nav-link:hover::before{
+ width: 100%; 
+
+}
+.navbar .burger-menu {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 35px;
+  width: 35px;
+}
+.navbar .new-buger {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 35px;
+  width: 35px;
+}
+@media screen and (max-width: 900px) {
+  .navbar {
+    padding: 20px;
+  }
+
+  .navbar .mytrash-logo {
+    position: relative;
+    top: 1px;
+    left: 15px;
+  }
+
+  .navbar .burger-menu {
+    display: block;
+    top: 20px;
+    right: 30px;
+  }
+
+  .nav-links {
+    top: 0;
+    right: 0;
+    position: absolute;
+    background-color: #49e295;
+    backdrop-filter: blur(6px);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100%;
+    transition: all 0.5s ease-in-out;
+
+  }
+  .nav-links.mobile-menu {
+    margin-right: 0;
+  }
+
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar .nav-links ul li {
+    margin: 25px 0;
+    font-size: 1.2em;
+  }
+}
+
+/*fin navbar*/
+
+/* Home.css */
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the top of the page */
+  height: 100%; /* Adjust for the height of the navbar */
+  padding-top: 64px; /* Add padding to push content below the navbar */
+  background-image: url('../../assets/bg.jpg'); /* Add the background image */
+  background-repeat: repeat-y; /* Repeat background image vertically while scrolling */
+  background-position: center
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  width: 50px; /* Adjust the width of the image */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add some space between the image and the logo */
+}
+
+.mytrash-logo {
+  font-family: "Lucida Handwriting"; /* Change font to "script" */
+  font-size: 3rem;
+  margin-bottom: 0.5rem; /* Reduce margin */
+}
+
+.catch-phrase {
+  font-family: "Garamond", serif; /* Change font to "Garamond" */
+  font-size: 5rem; /* Increase font size for better visibility */
+  margin-bottom: 2rem; /* Increase margin for spacing */
+}
+
+.get-started-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #49e295; /* Change button color */
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: 2rem; /* Add some space above the button */
+}
+
+.get-started-btn:hover {
+  background-color: #37b583; /* Darker shade of the primary color */
+}
+
+.image-container {
+  display: flex;
+  justify-content: center; /* Align images to the center horizontally */
+  margin-top: 1rem; /* Add space above the images */
+}
+
+.image {
+  width: 300px; /* Adjust the width of the images */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 10px; /* Add space between the images */
+}
+
+.description-box {
+  background-color: #c9f2d7; /* Light green background color */
+  padding: 20px; /* Add padding to the box */
+  border-radius: 10px; /* Add rounded corners to the box */
+  margin-bottom: 2rem; /* Add some bottom margin for spacing */
+  max-width: 600px; /* Set maximum width */
+  width: 80%; /* Set width to a percentage of the container */
+  margin-left: auto; /* Center the box horizontally */
+  margin-right: auto; /* Center the box horizontally */
+}
+
+.description {
+  font-family: "Garamond", serif; /* Change font family if needed */
+  font-weight: bold;
+  font-size: 1.2rem; /* Adjust font size */
+  text-align: center; /* Center the text */
+}

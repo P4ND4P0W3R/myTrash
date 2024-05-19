@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
+}
+
+.division {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 40px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+p {
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.team-names {
+    font-weight: bold;
+}
+
+.register_boutton {
+    background-color: #377520b7;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease;
+}
+
+.register_boutton:hover {
+    background-color: #377520;
+}
+
+@media (max-width: 768px) {
+    .division {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+}
