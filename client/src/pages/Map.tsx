@@ -1,16 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { LeafletMap } from '../components/LeafletMap';
 import { MapSidebar } from '../components/MapSidebar';
 import { ModalSideTrash } from '../components/ModalSideTrash';
 import NavBar from '../components/NavBar';
 
 import './css/Map.css';
-
-const data = [
-	{ id: 1, coordinateX: 48.851955, coordinateY: 2.35673, full: 1, etat: 0 },
-	{ id: 2, coordinateX: 48.852418, coordinateY: 2.35724, full: 0, etat: 0 },
-	{ id: 3, coordinateX: 48.853039, coordinateY: 2.355333, full: 1, etat: 1 },
-];
 
 // DEFINITION OF DEFAULT TRASH
 type TrashProps = {
@@ -23,6 +17,24 @@ type TrashProps = {
 
 export default function Map() {
 	const [indexToUpdate, setIndexToUpdate] = useState(-1);
+
+	const [data, setData] = useState<TrashProps[]>([]);
+
+	useEffect(() => {
+	// Make your API call here
+	// For demonstration, I'm assuming you have a function fetchDataFromAPI() that fetches the data
+	const fetchDataFromAPI = async () => {
+		try {
+			const response = await fetch('http://localhost:3000/bins');
+			const apiData = await response.json();
+			setData(apiData);
+		} catch (error) {
+			console.error('Error fetching data:', error);
+		}
+    };
+
+    fetchDataFromAPI();
+  }, []); // Empty dependency array ensures this effect runs only once, similar to componentDidMount
 
 	function updateFullById(id: number, newFullValue: number) {
 		// Find the index of the element with the given id

@@ -9,15 +9,11 @@ datasource db {
 
 /// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
 model bins {
-  binid               Int       @id @default(autoincrement())
-  locationdescription String?   @db.VarChar(255)
-  latitude            Float?
-  longitude           Float?
-  city                String    @db.VarChar(255)
-  isfull              Boolean   @default(false)
-  isgoodcondition     Boolean   @default(true)
-  emptiedat           DateTime? @db.Timestamp(6)
-  lastreported        DateTime? @db.Timestamp(6)
+  id          Int    @id @default(autoincrement())
+  coordinateX Float?
+  coordinateY Float?
+  full        Int?
+  etat        Int?
 }
 
 /// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
