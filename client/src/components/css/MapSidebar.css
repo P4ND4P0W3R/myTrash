@@ -4,96 +4,90 @@
     src: url('put_the_location_to_your_font.ttf or .otf');
 }*/
 
-
-
-
-.container{
-    background-color: #353743;
-    overflow: hidden;
+.container {
+	background-color: #353743;
+	overflow: hidden;
 }
 
 .timeZone {
-    font-family: 'digital-clock-font', sans-serif;
-    color: white;
+	font-family: 'digital-clock-font', sans-serif;
+	color: white;
 }
 
 .textDark {
-    color: #72747E;
-    font-weight: 600;
+	color: #72747e;
+	font-weight: 600;
 }
 
 .iconBootstrap {
-    color: skyblue;
-    width: 16px;
+	color: skyblue;
+	width: 16px;
 }
 
 .line_separation {
-    height: 2px;
-    width: 100%;
-    background-color: #72747ec5;
+	height: 2px;
+	width: 100%;
+	background-color: #72747ec5;
 }
 
 .data_text {
-    font-size: 15px;
+	font-size: 15px;
 }
 
 .circle {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    animation: loading 2s infinite;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	animation: loading 2s infinite;
 }
 
 .subCircle {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
 }
 
 .greenSubBackground {
-    background-color: green;
+	background-color: green;
 }
 .greenBackground {
-    background-color: rgba(0, 128, 0, 0.339);
+	background-color: rgba(0, 128, 0, 0.339);
 }
 
 .redSubBackground {
-    background-color: rgb(201, 0, 0);
+	background-color: rgb(201, 0, 0);
 }
 .redBackground {
-    background-color: rgba(151, 2, 2, 0.804);
+	background-color: rgba(151, 2, 2, 0.804);
 }
 
 .yellowSubBackground {
-    background-color: #FFC106;
+	background-color: #ffc106;
 }
 .yellowBackground {
-    background-color: #c0900088;
+	background-color: #c0900088;
 }
-
 
 /*LEGEND*/
 
 .legendTrash {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
 }
 
-
-
 @keyframes loading {
-    0% {
-        opacity: 0.4;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0.4;
-    }
+	0% {
+		opacity: 0.4;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.4;
+	}
 }

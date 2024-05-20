@@ -2,42 +2,43 @@
 
 /* Body styles */
 #contact {
-    background-color: #222; 
-    color: #fff; 
-    font-family: 'Times New Roman', Times, serif; 
-    margin: 0;
-    padding: 0;
-    height: 100vh; 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center;
+	background-color: #222;
+	color: #fff;
+	font-family: 'Times New Roman', Times, serif;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 /* Section styles */
 #contacttitle,
 #contactp1,
 #contactp2 {
-    padding: 20px; 
-    text-align: center; 
+	padding: 20px;
+	text-align: center;
 }
 
 /* Heading styles */
 #contacttitle h1 {
-    color: #fff; 
-    font-size: 4em;
+	color: #fff;
+	font-size: 4em;
 }
 
 /* Paragraph styles */
-#contactp1, #contactp2 p {
-    font-size: 1.5em; 
+#contactp1,
+#contactp2 p {
+	font-size: 1.5em;
 }
 
 /* Link styles */
 a {
-    color: #3498db; 
-    text-decoration: none;
+	color: #3498db;
+	text-decoration: none;
 }
 a:hover {
-    text-decoration: underline; 
+	text-decoration: underline;
 }

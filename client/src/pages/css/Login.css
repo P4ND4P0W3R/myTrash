@@ -1,170 +1,167 @@
 .mainContainer {
-    width: 100vw;
-    min-height: 100vh;
-    max-height: 100vh;
-    overflow: hidden;
-    position: relative;
-    background: linear-gradient(0.25turn, #e4eee7 25%, #edf1ec 75%);
+	width: 100vw;
+	min-height: 100vh;
+	max-height: 100vh;
+	overflow: hidden;
+	position: relative;
+	background: linear-gradient(0.25turn, #e4eee7 25%, #edf1ec 75%);
 }
 
 .backgroundWave {
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    z-index: 0;
-    max-width: 1100px;
-    overflow: hidden;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	z-index: 0;
+	max-width: 1100px;
+	overflow: hidden;
 }
 
 .backgroundPerson {
-    position: absolute;
-    right: 0px;
-    top: 200px;
-    z-index: 0;
-    overflow: hidden;
-    max-width: 800px;
-    object-fit: cover;
-    margin: auto;
+	position: absolute;
+	right: 0px;
+	top: 200px;
+	z-index: 0;
+	overflow: hidden;
+	max-width: 800px;
+	object-fit: cover;
+	margin: auto;
 }
-
 
 .inputField {
-    background-color: #69696900;
-    border: 0px;
-    font-size: 14;
-    outline: none;
+	background-color: #69696900;
+	border: 0px;
+	font-size: 14;
+	outline: none;
 }
 
-.loginContainer, .loginContainer *{
-    z-index: 100000000 !important;
+.loginContainer,
+.loginContainer * {
+	z-index: 100000000 !important;
 }
 
 .loginContainer {
-    width: 550px;
+	width: 550px;
 }
 
 .titleName {
-    font-size: 70px;
-    z-index: 100000 !important;
+	font-size: 70px;
+	z-index: 100000 !important;
 }
 
 .inputContainer {
-    background-color: #5f5f5f14;
-    position: relative;
-    z-index: 1;
+	background-color: #5f5f5f14;
+	position: relative;
+	z-index: 1;
 }
 
 .cursor {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .checkBox {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+	width: 13px;
+	height: 13px;
 
-    width: 13px;
-    height: 13px;
+	padding: 2px;
 
-    padding: 2px;
-
-    border: 2px #49e295 solid;
-    border-radius: 3px;
-    position: relative;
-
+	border: 2px #49e295 solid;
+	border-radius: 3px;
+	position: relative;
 }
 .checkBox:checked {
-    background-color: white;
-    border: 2px #49e295 solid;
-
+	background-color: white;
+	border: 2px #49e295 solid;
 }
 
 .checkBox:checked::after {
-    content: "";
+	content: '';
 
-    position: absolute;
+	position: absolute;
 
-    width: 6px;
-    height: 6px;
-    background-color: #49e295;
-    border-radius: 1px;
-    transform: translate(-9%, -9%);
+	width: 6px;
+	height: 6px;
+	background-color: #49e295;
+	border-radius: 1px;
+	transform: translate(-9%, -9%);
 }
 
 .connectionText {
-    font-weight: 600;
-    color: white;
-    background-color: #49e295;
-    cursor: pointer;
+	font-weight: 600;
+	color: white;
+	background-color: #49e295;
+	cursor: pointer;
 }
 
 .connectionText.disabled {
-    opacity: 0.6;
+	opacity: 0.6;
 }
 
 .passwordText {
-    color: #49e295;
-    cursor: pointer;
+	color: #49e295;
+	cursor: pointer;
 }
 
-.icon, .appleIcon {
-    cursor: pointer;
+.icon,
+.appleIcon {
+	cursor: pointer;
 }
 
 .appleIcon {
-    margin-top: -2px;
+	margin-top: -2px;
 }
 
 a {
-    text-decoration: none !important;
-    cursor: pointer;
+	text-decoration: none !important;
+	cursor: pointer;
 }
 
 .errorText {
-    color: red;
-    position: absolute;
-    bottom: -15px;
-    right: 0px;
+	color: red;
+	position: absolute;
+	bottom: -15px;
+	right: 0px;
 }
 
 @media screen and (max-width: 576px) {
-    .backgroundWave {
-        right: -160px;
-        min-width: 460px;
-    }
-    
-    .backgroundPerson {
-        right: -170px;
-        min-width: 400px;
-    }
+	.backgroundWave {
+		right: -160px;
+		min-width: 460px;
+	}
 
-    .loginContainer {
-        width: 300px;
-    }
+	.backgroundPerson {
+		right: -170px;
+		min-width: 400px;
+	}
 
-    .connectionText {
-        font-size: 14px;
-    }
-    
-    .passwordText {
-        font-size: 12px;
-    }
+	.loginContainer {
+		width: 300px;
+	}
 
-    .buttonContainer {
-        font-size: 12px;
-    }
+	.connectionText {
+		font-size: 14px;
+	}
 
-    .errorText {
-        color: red;
-        position: relative;
-        padding-bottom: 20px;
-    }
+	.passwordText {
+		font-size: 12px;
+	}
+
+	.buttonContainer {
+		font-size: 12px;
+	}
+
+	.errorText {
+		color: red;
+		position: relative;
+		padding-bottom: 20px;
+	}
 }
 
-
 @media screen and (max-width: 380px) {
-    .backgroundPerson {
-        display: none;
-    }
+	.backgroundPerson {
+		display: none;
+	}
 }

@@ -5,7 +5,7 @@ myTrash is a waste management solution designed to streamline the reporting of o
 ## About the project
 
 > [!NOTE]
-> This project  falls within the scope of the **Interdisciplinary Project** for the third year curriculum at [EFREI](https://www.efrei.fr/), which is a French CS engineering school.
+> This project falls within the scope of the **Interdisciplinary Project** for the third year curriculum at [EFREI](https://www.efrei.fr/), which is a French CS engineering school.
 
 ### ℹ️ Project description
 
