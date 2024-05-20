@@ -21,20 +21,20 @@ export default function Map() {
 	const [data, setData] = useState<TrashProps[]>([]);
 
 	useEffect(() => {
-	// Make your API call here
-	// For demonstration, I'm assuming you have a function fetchDataFromAPI() that fetches the data
-	const fetchDataFromAPI = async () => {
-		try {
-			const response = await fetch('http://localhost:3000/bins');
-			const apiData = await response.json();
-			setData(apiData);
-		} catch (error) {
-			console.error('Error fetching data:', error);
-		}
-    };
+		// Make your API call here
+		// For demonstration, I'm assuming you have a function fetchDataFromAPI() that fetches the data
+		const fetchDataFromAPI = async () => {
+			try {
+				const response = await fetch('http://localhost:3000/bins');
+				const apiData = await response.json();
+				setData(apiData);
+			} catch (error) {
+				console.error('Error fetching data:', error);
+			}
+		};
 
-    fetchDataFromAPI();
-  }, []); // Empty dependency array ensures this effect runs only once, similar to componentDidMount
+		fetchDataFromAPI();
+	}, []); // Empty dependency array ensures this effect runs only once, similar to componentDidMount
 
 	function updateFullById(id: number, newFullValue: number) {
 		// Find the index of the element with the given id
