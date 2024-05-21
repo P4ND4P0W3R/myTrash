@@ -28,7 +28,7 @@ function App() {
 					<Route path="/contact" element={<ContactUs />} />
 					<Route
 						path="/login"
-						element={user.email ? <Navigate to="/" replace /> : <Login />}
+						element={<Login />}
 					/>
 					<Route path="/register" element={<Register />} />
 				</Routes>
