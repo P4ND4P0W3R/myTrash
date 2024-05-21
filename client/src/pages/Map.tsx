@@ -43,7 +43,7 @@ export default function Map(){
             <NavBar/>
             <div className="main-container d-flex">
                 <MapSidebar />
-                <LeafletMap dataTrash={datdataa} toggleModal={toggleModal} handleClickTrash={handleClickTrash} />
+                <LeafletMap dataTrash={data} toggleModal={toggleModal} handleClickTrash={handleClickTrash} />
 
                 {showModalTrash && <ModalSideTrash showModalTrash={showModalTrash} handleCloseSideBar={handleCloseSideBar} selectedTrash={selectedTrash} />}
                 
