@@ -33,7 +33,7 @@ const Home = () => {
 						neglected.
 					</p>
 				</div>
-				<NavLink to="/get-started" className="get-started-btn">
+				<NavLink to="/map" className="get-started-btn">
 					Get Started
 				</NavLink>
 				<div className="image-container">
