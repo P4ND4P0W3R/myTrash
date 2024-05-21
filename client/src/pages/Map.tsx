@@ -1,53 +1,106 @@
-import { useState } from "react"
-import { LeafletMap } from "../components/LeafletMap"
-import { MapSidebar } from "../components/MapSidebar"
-import { ModalSideTrash } from "../components/ModalSideTrash"
+import { useState, useEffect } from 'react';
+import { LeafletMap } from '../components/LeafletMap';
+import { MapSidebar } from '../components/MapSidebar';
+import { ModalSideTrash } from '../components/ModalSideTrash';
 import NavBar from '../components/NavBar';
 
-import './css/Map.css'
-
-const data = [
-    { id: 1, coordinateX: 48.851955, coordinateY: 2.356730, full: 1 },
-    { id: 2, coordinateX: 48.852418, coordinateY: 2.357240, full: 0 },
-    { id: 3, coordinateX: 48.853039, coordinateY: 2.355333, full: 3 }
-]
+import './css/Map.css';
 
 // DEFINITION OF DEFAULT TRASH
 type TrashProps = {
-    id: number,
-    coordinateX: number;
-    coordinateY: number;
-    full: number;
-}
+	id: number;
+	coordinateX: number;
+	coordinateY: number;
+	full: number;
+	etat: number;
+};
 
+export default function Map() {
+	const [indexToUpdate, setIndexToUpdate] = useState(-1);
 
-export default function Map(){
+	const [data, setData] = useState<TrashProps[]>([]);
 
-    // DEFINITION OF INITAL TRASH => WHEN NO TRASH IS SELECTED
-    const initialTrash: TrashProps = {
-        id: 0,
-        coordinateX: 0,
-        coordinateY: 0,
-        full: 0,
-    };
+	useEffect(() => {
+		// Make your API call here
+		// For demonstration, I'm assuming you have a function fetchDataFromAPI() that fetches the data
+		const fetchDataFromAPI = async () => {
+			try {
+				const response = await fetch('http://localhost:3000/bins');
+				const apiData = await response.json();
+				setData(apiData);
+			} catch (error) {
+				console.error('Error fetching data:', error);
+			}
+		};
 
-    const [selectedTrash, setSelectedTrash] = useState<TrashProps>(initialTrash);
-    const [showModalTrash, setShowModalTrash] = useState(0)
+		fetchDataFromAPI();
+	}, []); // Empty dependency array ensures this effect runs only once, similar to componentDidMount
 
-    const toggleModal = () => { if(showModalTrash){ setShowModalTrash(0) } else { setShowModalTrash(1) } }
-    const handleClickTrash = (trash: TrashProps) => { setSelectedTrash(trash); setShowModalTrash(1) }
-    const handleCloseSideBar = () => { setSelectedTrash(initialTrash); setShowModalTrash(0) }
+	function updateFullById(id: number, newFullValue: number) {
+		// Find the index of the element with the given id
+		console.log('first');
+		const index = data.findIndex((trash) => trash.id === id);
+		// If the element with the given id exists
+		if (index !== -1) {
+			// Update the 'full' property of the element
+			console.log('before : ', data[index].full);
+			data[index].full = newFullValue;
+			setIndexToUpdate(index);
+			console.log('after : ', data[index].full);
+		}
+	}
 
-    return(
-        <>
-            <NavBar/>
-            <div className="main-container d-flex">
-                <MapSidebar />
-                <LeafletMap dataTrash={data} toggleModal={toggleModal} handleClickTrash={handleClickTrash} />
+	// DEFINITION OF INITAL TRASH => WHEN NO TRASH IS SELECTED
+	const initialTrash: TrashProps = {
+		id: 0,
+		coordinateX: 0,
+		coordinateY: 0,
+		full: 0,
+		etat: 0,
+	};
 
-                {showModalTrash && <ModalSideTrash showModalTrash={showModalTrash} handleCloseSideBar={handleCloseSideBar} selectedTrash={selectedTrash} />}
-                
-            </div>
-        </>
-    )
+	const [selectedTrash, setSelectedTrash] = useState<TrashProps>(initialTrash);
+	const [showModalTrash, setShowModalTrash] = useState(0);
+
+	const toggleModal = () => {
+		if (showModalTrash) {
+			setShowModalTrash(0);
+		} else {
+			setShowModalTrash(1);
+			console.log('22');
+		}
+	};
+	const handleClickTrash = (trash: TrashProps) => {
+		setSelectedTrash(trash);
+		setShowModalTrash(1);
+	};
+	const handleCloseSideBar = () => {
+		setSelectedTrash(initialTrash);
+		setShowModalTrash(0);
+	};
+
+	return (
+		<>
+			<NavBar />
+			<div className="main-container d-flex">
+				<MapSidebar />
+				<LeafletMap
+					dataTrash={data}
+					toggleModal={toggleModal}
+					handleClickTrash={handleClickTrash}
+					indexToUpdate={indexToUpdate}
+					setIndexToUpdate={setIndexToUpdate}
+				/>
+
+				{showModalTrash && (
+					<ModalSideTrash
+						showModalTrash={showModalTrash}
+						handleCloseSideBar={handleCloseSideBar}
+						selectedTrash={selectedTrash}
+						updateFullById={updateFullById}
+					/>
+				)}
+			</div>
+		</>
+	);
 }
