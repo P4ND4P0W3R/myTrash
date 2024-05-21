@@ -1,0 +1,140 @@
+
+
+.register-container input {
+    background-color:  #eaeef8;
+    width: 295px;
+    padding: 7px;
+    border-color: #ffffff;
+
+}
+
+.register-container {
+    background-color: #b3e2b9;
+    height: 370px;
+    width: 750px;
+    margin: auto;
+}
+
+
+.register-container .logo{
+    width: 50px;
+    margin-left: 5%;
+}
+
+.register-container .fleche{
+    width: 50px;
+}
+.connect a{
+    color: #4870e2;
+}
+.register-container .b1{
+    border-radius: 30px;
+    width: 25%;
+    padding: px;
+    background-color: #e5e8f0;
+    color: #7ee248;
+    border-color: #dbe0eb;
+    cursor: pointer;
+}
+
+.register-container a{
+    text-decoration: none;
+}
+
+
+label{
+    color: #7c818b;
+}
+.cardtitle {
+    font-size: 35px; /* Taille de police par défaut */
+}
+
+
+
+.errorMessage4{
+    color: red;
+    position: absolute;
+    font-size: 0.8rem; 
+}
+
+
+/* Responsive *//* Responsive *//* Responsive *//* Responsive *//* Responsive *//* Responsive *//* Responsive *//* Responsive *//* Responsive */
+
+/* Media query pour les petits écrans */
+@media only screen and (max-width: 768px) {
+    .cardtitle {
+        font-size: 25px; /* Taille de police ajustée pour les écrans plus petits */
+    }
+    .register-container input{
+        width: 300px;
+        padding: 5px;
+    }
+}
+
+@media only screen and (max-width: 435px) {
+
+    .register-container4 {
+        background-color: #ffffff;
+        height: 100vh;
+        width: 100vh;
+    }
+
+    .register-container .logo{
+        width: 200px;
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+    
+    .cardtitle {
+        font-size: 25px; /* Taille de police ajustée pour les écrans plus petits */
+        margin-bottom: 40px;
+    }
+    .register-container input{
+        /* width: 250px; */
+
+        width: 390px;
+        padding: 9px;
+    }
+
+    .INPUTOS{
+        margin-bottom: 50px;
+    }
+
+    .register-container .fleche{
+        width: 25px;
+    }
+}
+
+
+
+@media only screen and (max-width: 390px) {
+
+    .register-container input{
+        width: 350px;
+        padding: 9px;
+    }
+
+}
+
+@media only screen and (max-width: 375px) {
+
+    .register-container4 {
+        overflow: scroll;
+    }
+}
+
+
+@media only screen and (max-width: 320px) {
+
+    .register-container4 {
+        overflow: scroll;
+    }
+    .register-container4 input{
+        /* width: 250px; */
+
+        width: 300px;
+        padding: 9px;
+    }
+
+
+}

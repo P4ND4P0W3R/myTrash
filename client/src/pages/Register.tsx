@@ -1,5 +1,5 @@
 import NavBar from '../components/NavBar';
-
+import "./css/Register.css"
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -37,7 +37,7 @@ const Register = () => {
                 <div className="register-card" style={{ borderRadius: '15px' }}>
                     <div className="card-body mt-1">
                         <div className="w-100 d-flex justify-content-center align-items-center">
-                            <img src={logo} alt="logo" className="logo" />
+                            <img src={""} alt="logo" className="logo" />
                         </div>
                         <h5 className="card-title text-center"><strong>Créer un compte myTrash</strong></h5>
                         <div className="mt-2 text-center">
