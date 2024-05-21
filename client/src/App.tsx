@@ -26,10 +26,7 @@ function App() {
 					<Route path="/map" element={<Map />} />
 					<Route path="/Find" element={<Find />} />
 					<Route path="/contact" element={<ContactUs />} />
-					<Route
-						path="/login"
-						element={<Login />}
-					/>
+					<Route path="/login" element={<Login />} />
 					<Route path="/register" element={<Register />} />
 				</Routes>
 			</BrowserRouter>

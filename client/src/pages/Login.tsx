@@ -18,11 +18,11 @@ export default function Login() {
 			const response = await fetch('http://localhost:3000/login', {
 				method: 'POST',
 				headers: {
-					'Content-Type': 'application/json'
+					'Content-Type': 'application/json',
 				},
-				body: JSON.stringify({ email, password })
+				body: JSON.stringify({ email, password }),
 			});
-	
+
 			if (response.ok) {
 				const data = await response.json();
 				console.log('Login successful:', data);
@@ -30,14 +30,16 @@ export default function Login() {
 				setIsLoggedIn(true);
 			} else {
 				const errorData = await response.json();
-				throw new Error(errorData.error || 'Une erreur s\'est produite lors de la connexion.');
+				throw new Error(
+					errorData.error || "Une erreur s'est produite lors de la connexion."
+				);
 			}
 		} catch (error) {
 			console.error('Error logging in:', error);
 			setError((error as Error).message); // Set the error message to display to the user
 		}
-	};	
-	
+	};
+
 	const emailRegex = new RegExp(
 		/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 	);
@@ -50,7 +52,7 @@ export default function Login() {
 			setError('Mot de passe: min. 8 caractères.');
 			return;
 		}
-	
+
 		setIsLoading(true);
 		try {
 			await handleLogin(email, password);
@@ -58,12 +60,12 @@ export default function Login() {
 		} catch (error) {
 			// If an error occurs during login
 			console.error('Error logging in:', error);
-			setError('Une erreur s\'est produite lors de la connexion.'); // Set a generic error message
+			setError("Une erreur s'est produite lors de la connexion."); // Set a generic error message
 		} finally {
 			setIsLoading(false);
 		}
 	};
-	
+
 	return (
 		<>
 			<NavBar />

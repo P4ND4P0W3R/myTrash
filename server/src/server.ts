@@ -54,34 +54,35 @@ app.post('/register', async (req: Request, res: Response) => {
 });
 
 app.post('/login', async (req: Request, res: Response) => {
-    try {
-        const { email, password } = req.body;
-        console.log('email', email);
-        console.log('password', password);
+	try {
+		const { email, password } = req.body;
+		console.log('email', email);
+		console.log('password', password);
 
-        const user = await db.users.findFirst({
-            where: {
-                email,
-            },
-        });
-        console.log('user', user);
+		const user = await db.users.findFirst({
+			where: {
+				email,
+			},
+		});
+		console.log('user', user);
 
-        if (!user) {
-            return res.status(401).json({ error: 'User not found' });
-        }
+		if (!user) {
+			return res.status(401).json({ error: 'User not found' });
+		}
 
-        if (user.password !== password) {
-            return res.status(401).json({ error: 'Invalid password' });
-        }
+		if (user.password !== password) {
+			return res.status(401).json({ error: 'Invalid password' });
+		}
 
-        // Login successful
-        res.status(200).json({ message: 'Login successful', username: user.username });
-    } catch (error) {
-        console.error('Error logging in user:', error);
-        res.status(500).json({ error: 'Internal server error' });
-    }
+		// Login successful
+		res
+			.status(200)
+			.json({ message: 'Login successful', username: user.username });
+	} catch (error) {
+		console.error('Error logging in user:', error);
+		res.status(500).json({ error: 'Internal server error' });
+	}
 });
-
 
 app.listen(PORT, () => {
 	console.log(`Server is running on port ${PORT}`);
