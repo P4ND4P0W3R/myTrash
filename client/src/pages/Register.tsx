@@ -42,7 +42,7 @@ const Register = () => {
                         </div>
                         <h5 className="card-title text-center"><strong>Créer un compte myTrash</strong></h5>
                         <div className="mt-2 text-center">
-                            <p>Déjà un compte? <a href="#" className="connect">Connectez-vous</a></p>
+                            <p>Déjà un compte? <a href="/login" className="connect">Connectez-vous</a></p>
                             <p className="mb-1">Saisissez vos informations</p>
                         </div>
                         <form className="d-flex flex-column align-items-center justify-content-center" onSubmit={register}>
