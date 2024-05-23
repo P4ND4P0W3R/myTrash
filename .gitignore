@@ -139,5 +139,3 @@ dist
 *.njsproj
 *.sln
 *.sw?
-
-.prettierrc
