@@ -11,6 +11,10 @@ myTrash is a waste management solution designed to streamline the reporting of o
 
 myTrash aims to design a solution for reporting overloaded trash bins in public gardens in Paris and Bordeaux. The goal is to address the issue of overflowing trash bins by providing a mechanism for individuals to easily signal when a bin is full. This will allow the city to better manage waste collection and ensure that public spaces remain clean and safe for everyone. This will also allow the trash company to make fewer unnecessary trips to empty bins that are not full, reducing costs and environmental impact.
 
+The project leverages a modern web development stack: 
+- Backend: It utilizes [Node.js](https://nodejs.org/en) with [Express.js](https://expressjs.com/) a fast, unopinionated, minimalist web framework and [TypeScript](https://www.typescriptlang.org/) for type safety. [Prisma ORM](https://www.prisma.io/) simplifies database interactions with [PostgreSQL](https://www.postgresql.org/).
+- Frontend: It's built with [React.js](https://react.dev/) for a reactive and component-based user interface, enhanced with CSS for styling.
+
 ### 👥 Team members
 
 - [P4ND4P0W3R](https://github.com/P4ND4P0W3R) - Paul HU
